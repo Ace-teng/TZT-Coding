@@ -1,41 +1,73 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
+# ================ 编译生成文件 ================
+# 对象文件
 *.o
 *.obj
+*.slo
+*.lo
+*.ko
 
-# Precompiled Headers
+# 调试文件  
+*.pdb
+*.idb
+*.ilk
+*.dwo
+*.dwp
+
+# 预编译头文件
 *.gch
 *.pch
 
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
+# ================ 可执行文件 ================
 *.exe
 *.out
 *.app
+*.bin
+*.run
 
-# debug information files
-*.dwo
+# ================ 动态/静态库 ================
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+*.la
+*.lai
+
+# ================ IDE/编辑器临时文件 ================
+# Visual Studio
+.vs/
+*.suo
+*.sdf
+*.opensdf
+*.VC.db
+
+# VSCode
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# ================ 构建目录 ================
+build/
+dist/
+bin/
+Debug/
+Release/
+x64/
+x86/
+
+# ================ 其他 ================
+# 依赖文件
+*.d
+*.d.*
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# 备份文件
+*~
+*.bak
+*.swp
