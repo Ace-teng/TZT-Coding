@@ -16,7 +16,7 @@ int main(){
             l++;
             if(s[l] != s[l-1] && s[l - 1] != s[r]) brk--;
         }
-        ans += r-l+1;
+        ans += r-l+1 ;
     }
     cout<<ans<<endl;
     return 0;
