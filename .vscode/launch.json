@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",  // 生成的.exe路径（与tasks.json输出一致）
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,  // 改为true：独立终端窗口（方便输入输出，新手推荐）
+            "MIMode": "gdb",  // 显式指定调试模式（避免版本兼容问题）
+            "miDebuggerPath": "C:/mingw64/bin/gdb.exe",  // 确认此路径是否存在gdb.exe
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "将反汇编风格设置为 Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            // 关键：关联编译任务（与tasks.json的label完全一致！）
+            "preLaunchTask": "C/C++: g++.exe 生成活动文件"  
+        }
+    ]
+}
